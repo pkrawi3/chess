@@ -55,4 +55,16 @@ public class Bishop extends gamePiece {
 		}
 		else return movePiece(xi, yi, xf+1, yf+1, board);
 	}
+	
+	//--------------------------------------------------------- 
+	// Returns the Unicode representation of the piece
+	//---------------------------------------------------------
+	public char getUnicode() {
+		if(isWhite()) {
+			return '\u2657';
+		}
+		else {
+			return '\u265D';
+		}
+	}
 }

@@ -1,0 +1,56 @@
+\hypertarget{classchess_1_1_bishop}{}\doxysection{chess.\+Bishop Class Reference}
+\label{classchess_1_1_bishop}\index{chess.Bishop@{chess.Bishop}}
+
+
+Inheritance diagram for chess.\+Bishop\+:
+% FIG 0
+
+
+Collaboration diagram for chess.\+Bishop\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classchess_1_1_bishop_acbb64827dc131d58bdde010f3ba27d70}{Bishop}} (boolean white)
+\item 
+boolean \mbox{\hyperlink{classchess_1_1_bishop_a5586f61edc1cffe619e30337bea5df0e}{move\+Piece}} (int xi, int yi, int xf, int yf, \mbox{\hyperlink{classchess_1_1game_board}{game\+Board}} board)
+\item 
+boolean \mbox{\hyperlink{classchess_1_1_bishop_a0ca89cf7cfe9709ab9f03316aa482220}{attack\+Piece}} (int xi, int yi, int xf, int yf, \mbox{\hyperlink{classchess_1_1game_board}{game\+Board}} board)
+\item 
+char \mbox{\hyperlink{classchess_1_1_bishop_a63b287a423e716a1d9ace50ebbad1302}{get\+Unicode}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classchess_1_1_bishop_acbb64827dc131d58bdde010f3ba27d70}\label{classchess_1_1_bishop_acbb64827dc131d58bdde010f3ba27d70}} 
+\index{chess.Bishop@{chess.Bishop}!Bishop@{Bishop}}
+\index{Bishop@{Bishop}!chess.Bishop@{chess.Bishop}}
+\doxysubsubsection{\texorpdfstring{Bishop()}{Bishop()}}
+{\footnotesize\ttfamily chess.\+Bishop.\+Bishop (\begin{DoxyParamCaption}\item[{boolean}]{white }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classchess_1_1_bishop_a0ca89cf7cfe9709ab9f03316aa482220}\label{classchess_1_1_bishop_a0ca89cf7cfe9709ab9f03316aa482220}} 
+\index{chess.Bishop@{chess.Bishop}!attackPiece@{attackPiece}}
+\index{attackPiece@{attackPiece}!chess.Bishop@{chess.Bishop}}
+\doxysubsubsection{\texorpdfstring{attackPiece()}{attackPiece()}}
+{\footnotesize\ttfamily boolean chess.\+Bishop.\+attack\+Piece (\begin{DoxyParamCaption}\item[{int}]{xi,  }\item[{int}]{yi,  }\item[{int}]{xf,  }\item[{int}]{yf,  }\item[{\mbox{\hyperlink{classchess_1_1game_board}{game\+Board}}}]{board }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classchess_1_1_bishop_a63b287a423e716a1d9ace50ebbad1302}\label{classchess_1_1_bishop_a63b287a423e716a1d9ace50ebbad1302}} 
+\index{chess.Bishop@{chess.Bishop}!getUnicode@{getUnicode}}
+\index{getUnicode@{getUnicode}!chess.Bishop@{chess.Bishop}}
+\doxysubsubsection{\texorpdfstring{getUnicode()}{getUnicode()}}
+{\footnotesize\ttfamily char chess.\+Bishop.\+get\+Unicode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classchess_1_1_bishop_a5586f61edc1cffe619e30337bea5df0e}\label{classchess_1_1_bishop_a5586f61edc1cffe619e30337bea5df0e}} 
+\index{chess.Bishop@{chess.Bishop}!movePiece@{movePiece}}
+\index{movePiece@{movePiece}!chess.Bishop@{chess.Bishop}}
+\doxysubsubsection{\texorpdfstring{movePiece()}{movePiece()}}
+{\footnotesize\ttfamily boolean chess.\+Bishop.\+move\+Piece (\begin{DoxyParamCaption}\item[{int}]{xi,  }\item[{int}]{yi,  }\item[{int}]{xf,  }\item[{int}]{yf,  }\item[{\mbox{\hyperlink{classchess_1_1game_board}{game\+Board}}}]{board }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_bishop_8java}{Bishop.\+java}}\end{DoxyCompactItemize}

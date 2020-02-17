@@ -32,4 +32,16 @@ public class Knight extends gamePiece {
 	public boolean attackPiece(int xi, int yi, int xf, int yf, gameBoard board) {
 		return movePiece(xi, yi, xf, yf, board);
 	}
+	
+	//--------------------------------------------------------- 
+	// Returns the Unicode representation of the piece
+	//---------------------------------------------------------
+	public char getUnicode() {
+		if(isWhite()) {
+			return '\u2658';
+		}
+		else {
+			return '\u265E';
+		}
+	}
 }

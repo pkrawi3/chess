@@ -5,19 +5,21 @@ package chess;
 //---------------------------------------------------------
 public class gameBoard {
 	private gamePiece [][] board;
+	protected int width;
 	
 	//--------------------------------------------------------- 
 	// Constructor for game board
 	//---------------------------------------------------------
-	public gameBoard() {
-		board = new gamePiece [8][8];
+	public gameBoard(int w) {
+		width = w;
+		board = new gamePiece [width][width];
 	}
 	
 	//--------------------------------------------------------- 
 	// Checks whether coordinates are on the board
 	//---------------------------------------------------------
 	public boolean isValidSpot(int x, int y){
-		if(x < 0 || x > 7 || y < 0 || y > 7) {
+		if(x < 0 || x > (width-1) || y < 0 || y > (width-1)) {
 			return false;
 		}
 		else {			

@@ -36,4 +36,12 @@ abstract class gamePiece {
 		System.out.println("ERROR: Move method failed to be overrident");
 		return true;
 	}	
+
+	//--------------------------------------------------------- 
+	// Returns the unicode representation of the piece
+	//---------------------------------------------------------
+	public char getUnicode() {
+		return '.';
+	}
+
 }

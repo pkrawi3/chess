@@ -36,5 +36,16 @@ public class King extends gamePiece {
 		return false;
 	}
 	
-	
+	//--------------------------------------------------------- 
+	// Returns the Unicode representation of the piece
+	//---------------------------------------------------------
+	public char getUnicode() {
+		if(isWhite()) {
+			return '\u2654';
+		}
+		else {
+			return '\u265A';
+		}
+	}
+
 }

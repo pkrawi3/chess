@@ -10,12 +10,13 @@ public class game {
 	private Player currentTurn;
 	private gameBoard board;
 	private boolean gameEnded;
+	private terminalInterface userInterface;
 	
 	//--------------------------------------------------------- 
 	// Constructor for game, initializes the board and players
 	//---------------------------------------------------------
 	public game(){
-		this.board = new gameBoard();
+		this.board = new gameBoard(8);
 		
 		// Set white pieces
 		board.setPiece(0, 0, new Rook(true));
@@ -48,6 +49,16 @@ public class game {
 		this.currentTurn = white;
 		this.gameEnded = false;
 		
+		this.userInterface = new terminalInterface(this.board);
+		userInterface.printBoard();
+	}
+	
+	public void setCustomPieces() {
+		board.setPiece(0, 0, new customPiece1(true));
+		board.setPiece(7, 0, new customPiece2(true));
+		board.setPiece(0, 7, new customPiece1(false));
+		board.setPiece(7, 7, new customPiece2(false));
+		return;
 	}
 	
 	//--------------------------------------------------------- 
@@ -71,7 +82,7 @@ public class game {
 	
 	
 	//--------------------------------------------------------- 
-	// Checks whether certain player is in Checkmate
+	// Checks whether certain player is in Check mate
 	//---------------------------------------------------------
 	// TODO: Add king position to Player and update this function
 	// TODO: Extend function from CHECK -> CHECKMATE
@@ -112,6 +123,7 @@ public class game {
 		if(currentTurn == player) {
 			if(board.changeSpot(xi, yi, xf, yf, currentTurn)) {
 				nextTurn();
+				userInterface.printBoard();
 				if(endGame(currentTurn)) {
 					System.out.println("The game has ended.");
 					if(currentTurn.isWhite()) {

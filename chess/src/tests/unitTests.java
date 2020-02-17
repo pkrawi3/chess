@@ -7,7 +7,6 @@ import chess.*;
 import org.junit.jupiter.api.Test;
 
 class unitTests {
-
 	
 	@Test
 	//--------------------------------------------------------- 
@@ -159,6 +158,21 @@ class unitTests {
 		assertFalse(currentGame.move(white, 0, 1, 0, 2)); // shouldn't move - game ended
 	}
 	
+	@Test
+	//--------------------------------------------------------- 
+	// Newly added pieces on the board
+	//---------------------------------------------------------
+	void twoCustomPieces() {
+		game currentGame = new game();
+		currentGame.setCustomPieces();
+		Player white = currentGame.white;
+		Player black = currentGame.black;
+		
+		assertTrue(currentGame.move(white, 0, 0, 2, 2)); // white custom1 [0,0] -> [2,2] - Move white custom1 diagonal 2
+		assertTrue(currentGame.move(black, 7, 7, 7, 5)); // black custom2 [7,7] -> [7,5] - Move black custom2 down 2
+		assertFalse(currentGame.move(white, 2, 2, 3, 2)); // white rook [2,2] -> [3,2] - Move white custom1 illegally
+		assertFalse(currentGame.move(white, 7, 0, 5, 2)); // black queen [7,5] -> [6,4] - Move white custom2 illegally
+	}
 	
 	
 }

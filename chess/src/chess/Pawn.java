@@ -52,4 +52,16 @@ public class Pawn extends gamePiece {
 		return false;
 	}
 	
+	//--------------------------------------------------------- 
+	// Returns the Unicode representation of the piece
+	//---------------------------------------------------------
+	public char getUnicode() {
+		if(isWhite()) {
+			return '\u2659';
+		}
+		else {
+			return '\u265F';
+		}
+	}
+	
 }

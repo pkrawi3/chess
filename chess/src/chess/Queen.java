@@ -21,30 +21,22 @@ public class Queen extends gamePiece {
 		
 		// Non-diagonal condition
 		if(magn_x == 0 || magn_y == 0) {
-			if(magn_x < 0) {
-				for(int i=1; i<(-1*magn_x); i++) {
-					if(board.getSpot(xi-i, yi) != null) {
-						return false;
-					}
-				}
+			
+			// Check each spot on path to ensure no overlap
+			int sign = 1;
+			if(magn_x < 0 || magn_y < 0) {
+				sign = -1;
 			}
-			else if(magn_x > 0){
-				for(int i=1; i<(magn_x); i++) {
-					if(board.getSpot(xi+i, yi) != null) {
-						return false;
-					}
-				}
-			}
-			else if(magn_y < 0) {
-				for(int i=1; i<(-1*magn_y); i++) {
-					if(board.getSpot(xi, yi-i) != null) {
+			if(magn_x != 0) {
+				for(int i=1; i<Math.abs(magn_x); i++) {
+					if(board.getSpot(xi+sign*i, yi) != null) {
 						return false;
 					}
 				}
 			}
 			else {
-				for(int i=1; i<(magn_y); i++) {
-					if(board.getSpot(xi, yi+i) != null) {
+				for(int i=1; i<Math.abs(magn_y); i++) {
+					if(board.getSpot(xi, yi+sign*i) != null) {
 						return false;
 					}
 				}
@@ -101,5 +93,15 @@ public class Queen extends gamePiece {
 		else return movePiece(xi, yi, xf+1, yf+1, board);
 	}
 	
-	
+	//--------------------------------------------------------- 
+	// Returns the Unicode representation of the piece
+	//---------------------------------------------------------
+	public char getUnicode() {
+		if(isWhite()) {
+			return '\u2655';
+		}
+		else {
+			return '\u265B';
+		}
+	}
 }
